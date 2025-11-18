@@ -1,0 +1,16 @@
+[
+  {
+    "id": 30,
+    "title": "Неделя о расслабленном: слово владыки",
+    "thumbnail": "/images/video-1.jpg",
+    "duration": "12:45",
+    "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  },
+  {
+    "id": 31,
+    "title": "Как готовиться к исповеди",
+    "thumbnail": "/images/video-2.jpg",
+    "duration": "08:12",
+    "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  }
+]
