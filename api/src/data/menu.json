@@ -1,0 +1,79 @@
+{
+  "main": [
+    {"label": "Епархия", "link": "/about", "children": [
+      {"label": "История", "link": "/about/history"},
+      {"label": "Архиерей", "link": "/about/bishop"},
+      {"label": "Управление", "link": "/about/administration"}
+    ]},
+    {"label": "Новости", "link": "/news"},
+    {"label": "Публикации", "link": "/publications"},
+    {"label": "Расписание", "link": "/schedule", "children": [
+      {"label": "Богослужения", "link": "/schedule/services"},
+      {"label": "Поездки", "link": "/schedule/pilgrimage"}
+    ]},
+    {"label": "Епархиальные отделы", "link": "/departments", "children": [
+      {"label": "Молодёжный отдел", "link": "/departments/youth"},
+      {"label": "Отдел образования", "link": "/departments/education"},
+      {"label": "Социальное служение", "link": "/departments/social"}
+    ]},
+    {"label": "Контакты", "link": "/contacts"}
+  ],
+  "footer": [
+    {
+      "title": "Епархия",
+      "items": [
+        {"label": "История", "link": "/about/history"},
+        {"label": "Архиерей", "link": "/about/bishop"},
+        {"label": "Служение", "link": "/about/ministry"}
+      ]
+    },
+    {
+      "title": "Новости",
+      "items": [
+        {"label": "Главные новости", "link": "/news"},
+        {"label": "Репортажи", "link": "/news/reports"},
+        {"label": "Фото", "link": "/news/photos"}
+      ]
+    },
+    {
+      "title": "Публикации",
+      "items": [
+        {"label": "Слово архипастыря", "link": "/publications/archpastor"},
+        {"label": "Беседы", "link": "/publications/talks"},
+        {"label": "Документы", "link": "/publications/docs"}
+      ]
+    },
+    {
+      "title": "Расписание",
+      "items": [
+        {"label": "Календарь", "link": "/calendar"},
+        {"label": "Воскресные школы", "link": "/schools"},
+        {"label": "Паломничество", "link": "/pilgrimage"}
+      ]
+    },
+    {
+      "title": "Отделы",
+      "items": [
+        {"label": "Образование", "link": "/departments/education"},
+        {"label": "Социальное служение", "link": "/departments/social"},
+        {"label": "Миссионерский отдел", "link": "/departments/mission"}
+      ]
+    },
+    {
+      "title": "Мультимедиа",
+      "items": [
+        {"label": "Видео", "link": "/video"},
+        {"label": "Аудио", "link": "/audio"},
+        {"label": "Пресса", "link": "/press"}
+      ]
+    },
+    {
+      "title": "Контакты",
+      "items": [
+        {"label": "Приёмная", "link": "/contacts"},
+        {"label": "Пожертвования", "link": "/donate"},
+        {"label": "Социальные сети", "link": "/social"}
+      ]
+    }
+  ]
+}
