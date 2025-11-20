@@ -1,0 +1,145 @@
+openapi: 3.0.3
+info:
+  title: Barysh Eparchy Modern API
+  version: 1.0.0
+servers:
+  - url: http://localhost:4000/api
+paths:
+  /auth/register:
+    post:
+      summary: Register user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '201':
+          description: Registered
+  /auth/login:
+    post:
+      summary: Login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Token
+  /content/posts:
+    get:
+      summary: List posts
+      responses:
+        '200':
+          description: List of posts
+    post:
+      summary: Create post
+      security:
+        - bearerAuth: []
+      responses:
+        '201':
+          description: Created
+  /content/posts/{id}:
+    get:
+      summary: Get post
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Post
+    put:
+      summary: Update post
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Updated
+    delete:
+      summary: Delete post
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Deleted
+  /content/pages:
+    get:
+      summary: List pages
+      responses:
+        '200':
+          description: Pages
+  /content/categories:
+    get:
+      summary: List categories
+      responses:
+        '200':
+          description: Categories
+  /content/tags:
+    get:
+      summary: List tags
+      responses:
+        '200':
+          description: Tags
+  /legacy/news:
+    get:
+      summary: Read legacy news without mutating old DB
+      responses:
+        '200':
+          description: Legacy news
+  /media:
+    get:
+      summary: List media
+      responses:
+        '200':
+          description: Media items
+    post:
+      summary: Upload media
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '201':
+          description: Uploaded
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
