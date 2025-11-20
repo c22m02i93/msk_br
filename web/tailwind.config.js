@@ -1,40 +1,50 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./index.html', './src/**/*.{ts,tsx}'],
+  darkMode: ["class"],
+  content: [
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./lib/**/*.{ts,tsx}",
+  ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif']
+      container: {
+        center: true,
+        padding: "1rem",
+        screens: {
+          "2xl": "1400px",
+        },
       },
       colors: {
-        brand: {
-          blue: '#1E67B7',
-          dark: '#0E2A47',
-          gold: '#F7D046',
-          beige: '#F8F5EE'
+        background: "#f5f2eb",
+        foreground: "#1f1b16",
+        primary: {
+          DEFAULT: "#6b705c",
+          foreground: "#f5f2eb",
         },
-        neutral: {
-          50: '#F9FAFB',
-          100: '#F3F4F6',
-          200: '#E5E7EB',
-          300: '#D1D5DB',
-          400: '#9CA3AF',
-          500: '#6B7280',
-          600: '#4B5563',
-          700: '#374151',
-          800: '#1F2937',
-          900: '#111827'
-        }
+        secondary: {
+          DEFAULT: "#b7b5ad",
+          foreground: "#1f1b16",
+        },
+        muted: {
+          DEFAULT: "#e6e3dc",
+          foreground: "#5c5346",
+        },
+        accent: {
+          DEFAULT: "#a68a64",
+          foreground: "#1f1b16",
+        },
+        border: "#d6cfc4",
+        input: "#d6cfc4",
+        ring: "#6b705c",
+      },
+      fontFamily: {
+        sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "sans-serif"],
       },
       boxShadow: {
-        card: '0px 20px 60px rgba(8, 46, 108, 0.08)',
-        header: '0px 12px 40px rgba(8, 46, 108, 0.08)',
-        soft: '0px 8px 24px rgba(17, 24, 39, 0.06)'
+        soft: "0 10px 30px -12px rgba(50, 50, 50, 0.35)",
       },
-      borderRadius: {
-        xl: '18px'
-      }
-    }
+    },
   },
-  plugins: []
+  plugins: [],
 };
