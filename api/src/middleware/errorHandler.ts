@@ -1,0 +1,10 @@
+import { NextFunction, Request, Response } from 'express';
+
+export function errorHandler(err: unknown, _req: Request, res: Response, _next: NextFunction) {
+  console.error(err);
+  const status = 500;
+  res.status(status).json({
+    status: 'error',
+    message: err instanceof Error ? err.message : 'Internal server error',
+  });
+}

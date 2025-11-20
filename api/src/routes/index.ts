@@ -1,26 +1,14 @@
 import { Router } from 'express';
-import {
-  announcements,
-  calendar,
-  mainNews,
-  menu,
-  news,
-  popular,
-  publications,
-  search,
-  videos
-} from '../controllers/contentController.js';
+import authRoutes from '../modules/auth/auth.routes.js';
+import contentRoutes from '../modules/content/content.routes.js';
+import mediaRoutes from '../modules/media/media.routes.js';
+import legacyRoutes from '../modules/legacy/legacy.routes.js';
 
 const router = Router();
 
-router.get('/main-news', mainNews);
-router.get('/news', news);
-router.get('/publications', publications);
-router.get('/announcements', announcements);
-router.get('/calendar/today', calendar);
-router.get('/videos', videos);
-router.get('/search', search);
-router.get('/popular', popular);
-router.get('/menu', menu);
+router.use('/auth', authRoutes);
+router.use('/content', contentRoutes);
+router.use('/media', mediaRoutes);
+router.use('/legacy', legacyRoutes);
 
 export default router;
