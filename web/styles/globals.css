@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: theme('colors.background');
+}
+
+body {
+  @apply bg-background text-foreground font-sans antialiased min-h-screen;
+}
+
+a {
+  @apply text-primary underline-offset-4 hover:underline;
+}
+
+img {
+  @apply select-none;
+}
+
+.container-grid {
+  @apply grid gap-6 lg:grid-cols-3;
+}
+
+.section-title {
+  @apply text-2xl font-semibold tracking-tight text-foreground mb-4 flex items-center gap-2;
+}
+
+.card-muted {
+  @apply bg-muted text-muted-foreground;
+}
